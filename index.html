@@ -4,7 +4,7 @@
     
     <title>table index page</title>
 </head>
-<body>
+<body style="background-color:burlywood;">
     <style>
         .table{
             width: 100%;
@@ -12,7 +12,7 @@
             border-collapse: collapse;
           }          
           .first-row{
-             height: 90px;
+             height: 150px;
 
           }
 
@@ -67,6 +67,7 @@
             border-color: black;
             border-width: 3px;
             background-color: lightseagreen;
+            background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjYyNy1hZXctNDctdGVjaG5vbG9neWJhY2tncm91bmRfMS5qcGc.jpg);
         
           }
           .third-row-th-one{
@@ -85,11 +86,14 @@
             height: 500px;
             border-style: solid;
             text-align: center;
+            background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjYyNy1hZXctNDctdGVjaG5vbG9neWJhY2tncm91bmRfMS5qcGc.jpg);
+           
           }
           .fourth-row-th-one{
             border-style: solid;
             border-color: black;
             border-width: 3px;
+            text-align: center;
            
         
           }
@@ -107,31 +111,35 @@
     </style>
 </head>
 <body>
-    <table class="table">
+    <table class="table" style="text-align: center;">
         <!--first row-->
        <tr class="first-row" >
-        <td class="first-row-th"><a href="#home"><h2>Home</h2></a></td>
-        <td class="second-row-th"> <a href="#about"><h2>About</h2></a></td>
-        <td class="third-row-th"><a href="#projects"><h2>Project</h2></a></td>
-        <td class="fourth-row-th"><a href="#contacts"><h2>Contact</h2></a></td>
+        <td class="first-row-th"><a href="#home"><h2 style=" font-size: 30px;">Home</h2></a></td>
+        <td class="second-row-th"> <a href="#about"><h2 style="font-size: 30px;">About</h2></a></td>
+        <td class="third-row-th"><a href="#projects"><h2 style="font-size: 30px;">Project</h2></a></td>
+        <td class="fourth-row-th"><a href="#contacts"><h2 style="font-size: 30px;">Contact</h2></a></td>
        </tr>
        
        <!--second row-->
-       <tr class="second-row">
+       <tr class="second-row" img>
         <td colspan="4" class="second-row-th-one" id="home">
-            <h1>My Name Is Rohit Kharpuriye</h1>
-            <h2>I Am A Full Stack Devloper</h2>
+          <img src="assets/image/media_20250221_160900_3041301229786159257.jpg" height="250px" style="background-color: black;">
+          <br>
+          <br>
+         <b> <big style="color: darkred; background-color: floralwhite; height: 100px; width: 200px; font-size: 30px;"  >My Name Is Rohit Kharpuriye</big></b>
+          <br><br>
+           <b> <big style="color: darkred; background-color: floralwhite; font-size: 40px;"  >  I Am A Full Stack Developer....</big></b>
         </td>
          
        </tr>
        <!--third row-->
        <tr class="third-row-th-one">
         <td colspan="4" class="third-row-th-one" id="about">
-            <h1>About</h1>
-            <h3><b>Hello there! I'm Rohit Kharpuriye a passionate Full Stack Web Developer
+            <h1 style="color: green;font-size: 40px;">About</h1>
+            <h3 style="font-size: 30px;" >Hello there! I'm Rohit Kharpuriye a passionate Full Stack Web Developer
               with a keen interest in leveraging technology to create impactful solutions.
               With a solid foundation in both front-end and back-end development,
-              I specialize in creating project from various language.</b></h3>
+              I specialize in creating project from various language.</h3>
         </td>
        
        
@@ -139,50 +147,50 @@
        <!--fourth row-->
        <tr class="fourth-row-th-one">
         <td colspan="4" class="fourth-row-th-one" id="projects">
-            <h1><b>My Project</b></h1>
-            <h3>My HTML Project</h3>
-            <ol>
-               
-                <p><b>1. Influential Persons</b></p>
-                <a href="influential-person.html" target="_blank">A Ranking of the Most Influential Persons in History </a>
-                <p><b>2. My Resume</b></p>
-                <a href="resume.html" target="_blank"> My Resume</a>
-                <p><b>3. Regestration Form</b></p>
-                <a href="Registearation-Form.html">Registearation Form</a>
-                <p><b>4.HTML Form</b></p>
-                <a href="Form.html">Form By Using HTML</a>
-                <P><b>5.Table </b></P>
-                <a href="table-tag.html">CPU Components</a>
-                <p><b>6.Table Report Card</b></p>
-                <a href="table-report-card.html">Using Table Tag Created Report Card</a>
-                <p><b>7.Table Youtube Page</b></p>
-                <a href="table-youtube-page.html">Using Table Tag Created Youtube Page</a>
-                <p><b>8.Table Student Data</b></p>
-                <a href="table-student-data.html">Using Table Tag Created Student Data</a>
-                <p><b>9. Assignment</b></p>
-                <a href="table-assignment.html">Table Assignment</a>
-                <p><b>10.Table Calculator</b></p>
-                <a href="table-calculator.html">Created Calculator Using HTML</a>
-                <p><b>Table Index</b></p>
-                <a href="tbl-index.html"> Table Page</a>
+           
+           <table style="border-style: solid; border-width: 3px; border-width: 100%; height:300px ; border-collapse: collapse; text-align: center;" >
+            <caption ><p style="font-size: 30px; color: yellow;" ><b> My projects</b></p></caption>
+            <tr>
+              
+              <td style="border-style: solid; border-width: 3px; width: 100%;" > <a href="table-calculator.html"><h3 style="color: yellow;">project one</h3> <img src="https://png.pngtree.com/element_our/20190529/ourmid/pngtree-calculator-digital-calculator-illustration-image_1216297.jpg" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px; "><a href="resume.html"><h3 style="color: yellow;">Project two</h3> <img src="https://w7.pngwing.com/pngs/605/888/png-transparent-resume-curriculum-vitae-template-moto-highway-racing-computer-icons-resume-blue-text-resume-thumbnail.png" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px;"><a href="table-report-card.html"><h3 style="color: yellow;">Project three</h3> <img src="https://w7.pngwing.com/pngs/777/982/png-transparent-report-card-national-secondary-school-student-education-report-angle-text-class-thumbnail.png" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px;"><a href="table-student-data.html"><h3 style="color: yellow;">Project Four</h3><img src="https://w7.pngwing.com/pngs/27/972/png-transparent-pedagogy-massive-open-online-course-education-university-student-student-thumbnail.png" height="200px" alt=""></a></td>
+            </tr>
+            <tr>
+              <td style="border-style: solid; border-width: 3px;"><a href="table-youtube-page.html"><h3 style="color: yellow;">Project five</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjsEE5AEnUPCrhugw6xO3zSRRRsP_KGvMMnw&s" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px;"> <a href="regestration-form.html"><h3 style="color: yellow;">Project six</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJtfGEU_ASk9TaRDwNObrcpNIfZ3RrnIWxqq2E-S-ylvd76UMeiA1bEI8WAjllJDdaaY&usqp=CAU" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px;"><a href="influential-person.html"><h3 style="color: yellow;">Project seven</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwD0QFzfYxyuzmgJScCZ9v12-tOlf3jPBi4Q&s" height="200px" alt=""></a></td>
+
+              <td style="border-style: solid; border-width: 3px;"><a href="table-chess.html"><h3 style="color: yellow;" >Project eight</h3><img src="https://i.pinimg.com/474x/6f/75/d1/6f75d1b27876c1ce5f920c1ba22730f3.jpg" height="200px" alt=""></a></td>
+            </tr>
+       
+           </table>
+           <br>
             
             
-            </ol>
+       
         </td>
        
        </tr>
        <!--fifth row-->
        <tr class="fifth-row">
         <td colspan="4" class="fifth-row-th-one" id="contacts">
-            <h1><b>Contact</b></h1>
+            <h1 style="color: red; font-size: 40px;">Contact</h1>
         </blockquote>
-        <p><b>Phone:</b> <a title="my contact" href="tel:+91 7020886178"> +91 7020886178</a></p>
-        <p><b>Email:</b><a title="my contact" href="mailto:kharpuriyerohit99@gmail.com"> mailto:rohitkharpuriye99@gmail.com</a></p>
-        <p><b>Location:</b> <a title="my contact"
+     
+        <p style="font-size: 20px;"><b>Phone:</b> <a title="my contact" href="tel:+91 7020886178"> +91 7020886178</a></p>
+        <p style="font-size: 20px;"><b>Email:</b><a title="my contact" href="mailto:kharpuriyerohit99@gmail.com"> mailto:rohitkharpuriye99@gmail.com</a></p>
+        <p style="font-size: 20px;"><b>Location:</b> <a title="my contact"
                 href="https://www.google.com/maps/place/Jolwadi,+Maharashtra+441305/@21.3473387,78.4464008,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd44e6da32cbb5f:0x5377bb2a1d05473!8m2!3d21.3471847!4d78.4485509!16s%2Fg%2F1hjh3lh7l?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"> Jolwadi</a></p>
-                <p><b>GitHub:</b> <a href="https://github.com/RohitFullStackDevloper">https://github.com/RohitFullStackDevloper</a></p>
-        <p><b>Linkedin:</b> Rohit kharpuriye </p>
-        <p><b>Skype:</b> Available</p> 
+                <p style="font-size: 20px;"><b>GitHub:</b> <a href="https://github.com/RohitFullStackDevloper">https://github.com/RohitFullStackDevloper</a></p>
+        <p style="font-size: 20px;"><b>Linkedin:</b> Rohit kharpuriye </p>
+        <p style="font-size: 20px;"><b>Skype:</b> Available</p> 
 
 
 
