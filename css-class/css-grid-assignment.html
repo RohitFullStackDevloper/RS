@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking News</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: silver;
+            padding: 0%;
+            margin: 0%;
+            margin-left: 0%;
+        }
+
+        .main-container {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+
+        }
+
+        .box-one {
+            background-color: green;
+            width: 99%;
+            height: 70px;
+            grid-column: 1 /span 5;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 20px;
+            color: white;
+
+
+        }
+
+        .box-two {
+            background-color: white;
+            width: 100%;
+            height: 500px;
+            grid-column: 1/span 3;
+            border-radius: 10px;
+            margin-left: 10px;
+            text-align: justify;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+        }
+
+        .box-three {
+            background-color: white;
+            width: 96%;
+            height: 500px;
+            grid-column: 4/ span 2;
+            border-radius: 10px;
+
+        }
+
+        .box-four {
+            background-color: black;
+            width: 100%;
+            height: 30px;
+            grid-column: 1/ span 5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+
+    <head>
+
+    <body>
+        <div class="main-container">
+            <div class="box-one">Top Tech News</div>
+            <div class="box-two">
+                <ul>
+              <li style=" font-size: 20px; color:red" > Here's a more detailed look at these stories:</li>
+               <li> <p style="padding: 20px;">Nvidia Becomes the World's Most Valuable Company:
+                Nvidia's high-end processors are playing a central role in the AI technology race, driving the company's
+                stock price and market capitalization to the top.</p></li>
+             <li><p style="padding: 20px;">US Pushing for Tighter Chip Export Controls to China:
+                The US is pressuring the Netherlands and Japan to restrict the export of advanced chipmaking equipment
+                to China, aiming to slow down China's technological advancements.</p></li>
+              <li><p style="padding: 20px;"> AMD Investigating Data Theft Claims:
+                AMD is investigating claims that the company's data was stolen in a recent hack, raising concerns about
+                the security of sensitive information.</p></li>
+               <li><p style="padding: 20px;">Bayer Uses AI to Combat Herbicide Resistance:
+                Bayer is leveraging AI to accelerate the development of new herbicides that can overcome the growing
+                problem of herbicide resistance in crops.</p> </li>
+           <li><p style="padding: 20px;">Microsoft Buys Carbon Credits:
+                Microsoft is purchasing 8 million carbon credits from BTG Pactual in what is reported to be the
+                largest-ever sale of carbon credits, demonstrating a commitment to reducing its carbon footprint.</p> </li>
+            </ul>
+            </div>
+            <div class="box-three">
+                <p style="padding: 20px; font-size: 20px; font-weight: bold;">Related News</p>
+                <ul>
+                    <li>Nvidia Becomes the World's Most Valuable Company</li>
+                    <li>US Pushing for Tighter Chip Export Controls to China</li>
+                    <li>AMD Investigating Data Theft Claims</li>
+                    <li>Bayer Uses AI to Combat Herbicide Resistance</li>
+                    <li>Microsoft Buys Carbon Credits</li>
+                </ul>
+            </div>
+            <div class="box-four">© 2025 News Company. All rights reserved</div>
+
+
+        </div>
+
+    </body>
+
+</html>
