@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website using grid</title>
+    <style>
+        body {
+            height: auto;
+            width: 100vw;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+
+
+        }
+
+        .main-container {
+            height: auto;
+            width: 100%;
+            background-color: white;
+            display: grid;
+            row-gap: 20px;
+            grid-template-rows: repeat(12 1fr);
+
+
+
+        }
+
+        .box-one {
+            height: 80px;
+            width: 100%;
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .box-one-1 {
+            width: 40%;
+            height: 80px;
+            margin-top: 20px;
+            color: rgb(84, 5, 84);
+            font-size: 40px;
+            margin-left: 30px;
+
+
+        }
+
+        .box-one-2 {
+            width: 70%;
+            height: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: flex;
+            margin-top: 20px;
+            font-size: 10px;
+
+        }
+
+        span {
+            margin-left: 120px;
+            font-size: 30px;
+        }
+
+        .box-two {
+            height: 400px;
+            width: 100%;
+            column-gap: 100px;
+
+        }
+
+        .img-1 {
+            float: right;
+
+
+        }
+
+        .box-three {
+            height: 300px;
+            width: 100%;
+            margin-top: 100px;
+
+
+        }
+
+        .b-one {
+            margin-left: 200px;
+            padding-top: 70px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: orange;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .b-two {
+
+
+            text-align: center;
+            font-size: 120px;
+            font-weight: bold;
+            color: rgb(120, 8, 120);
+            margin-left: 120px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .box-four {
+            height: 400px;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: grid;
+            row-gap: 10px;
+            column-gap: 10px;
+            padding-top: 20px;
+
+
+        }
+
+        .box-four-one {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+        .img-two {
+            margin-left: 30px;
+            margin-top: 20px;
+            border-radius: 30px;
+        }
+
+        .box-four-two {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+        .box-four-three {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+
+        .box-five {
+            height: 400px;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: grid;
+            row-gap: 10px;
+            column-gap: 10px;
+            padding-top: 20px;
+
+
+        }
+        .box-five-one{
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+          background-color: whitesmoke;
+        
+           
+
+        }
+        .box-five-two{
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+            background-color: whitesmoke;
+         
+
+        }
+        .box-five-three{
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+            background-color: whitesmoke;
+          
+
+        }
+
+        .box-six {
+            height: 550px;
+            width: 100%;
+            background-color: red;
+        }
+
+        .box-seven {
+            height: 80px;
+            width: 100%;
+           background-color: orange;
+            margin-top: 70px;
+            border-radius: 20px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="box-one">
+            <div class="box-one-1"> Shree Organic Mashroom</div>
+            <div class="box-one-2">
+                <span>Home</span>
+                <span>Products</span>
+                <span>Contacts</span>
+                <span>About</span>
+            </div>
+        </div>
+
+        <div class="box-two">
+
+            <div><img class="img-1"
+                    src="https://www.veriheal.com/blog/wp-content/uploads/2024/12/New-Veriheal-Thumbnail-Template-15.jpg"
+                    alt="mashroom" height="400px" width="700px">
+            </div>
+            <div class="box-three">
+                <b class="b-one" style="margin-top: 50px;"><i>Healthy And Fresh</i> </b>
+                <b class="b-two">Mashroom</b>
+
+
+            </div>
+            <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px;">
+                We Deal In</p>
+
+
+            <div class="box-four">
+                <div class="box-four-one">
+                    <img class="img-two"
+                        src="https://static.vecteezy.com/system/resources/previews/031/994/844/non_2x/mushrooms-in-a-wooden-plate-on-a-napkin-photo.jpg"
+                        alt="" height="300px">
+                    <b style="margin-left: 120px; font-size: 30px; margin-top: 40px;">Button Mashroom</b>
+                </div>
+                <div class=" box box-four-two">
+                    <img class="img-two" src="https://static.toiimg.com/photo/74866653.cms" alt="" height="300px"
+                        width="450px">
+                    <b style="margin-left: 120px; font-size: 30px; margin-top: 40px;">Oyster Mashroom</b>
+                </div>
+                <div class="box-four-three">
+                    <img class="img-two"
+                        src="https://rukminim2.flixcart.com/image/850/1000/xif0q/plant-seed/9/d/f/1-msnps1kg-monday-square-original-imagjkbyedcgtkcv.jpeg?q=90&crop=false"
+                        alt="" height="300px">
+                    <b style="margin-left: 120px; font-size: 30px; margin-top: 40px;">Straw mashroom</b>
+                </div>
+
+            </div>
+            <p
+                style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px;">
+                Contact Us</p>
+
+            <div class="box-five">
+                <div class="box-five-one">
+                    <img style="margin-left: 190px; border-radius: 50px;  margin-top: 10px;" src="https://i.pinimg.com/736x/a1/4f/28/a14f28d60c9e95a468bc379a787783cf.jpg" alt="" height="100px">
+                   <p style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: bold;">Our Office Address</p>
+                   <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 25px; font-weight: bold;">Near By Bank Of india Katol Road Bharsingi Room No.2 441305.</p>
+                </div>
+                <div class="box-five-two">
+                    <img style="margin-left: 190px; border-radius: 50px;  margin-top: 10px;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7x7UhLVjVosWG5vNUHXf85m1f7xsk5zD_A&s" alt="emial" height="100px">
+                    <p style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: bold;">Genaral Enquiries</p>
+                    <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 25px; font-weight: bold;"><a href="maito;kharpuriyerohit740@gmail.com">kharpuriyerohit740@gmail.com</a></p>
+                </div>
+                <div class="box-five-three">
+                    <img style="margin-left: 200px; border-radius: 50px; margin-top: 10px;"  src="https://i.pinimg.com/736x/c1/00/d4/c100d4c70bc17365a2a42ac22ef782da.jpg" alt="call" height="100px">
+                    <p style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: bold;">Call Us</p>
+                    <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 25px; font-weight: bold;"><a href="tel;+91 7020886178">+91 7020886178</a></p>
+                </div>
+            </div>
+            <div class="box-six"><img src="../assets/image/Screenshot (18).png" alt="" height="100%" width="100%"> </div>
+            <div class="box-seven">
+                <p style="text-align: center; padding-top: 30px;  font-size: 25px; font-weight: bold; ">© 2025 News Company. All rights reserved</p>
+            </div>
+           
+
+        </div>
+
+</body>
+
+</html>
