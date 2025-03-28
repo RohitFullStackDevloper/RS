@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #container {
+            width: 100%;
+
+        }
+
+        #header {
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(50, 45, 45);
+        }
+
+        .profile-links {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(50, 45, 45);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .logo-h1 {
+            color: white;
+            padding-left: 50px;
+        }
+
+        .profile-links {
+            color: white;
+        }
+
+        #home {
+            width: 100%;
+            height: 600px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .home-one {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .home-one-img {
+            border-radius: 50px;
+            margin-top: 40px;
+            margin-left: 70px;
+        }
+
+        .home-two {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        .home-two-h1 {
+            text-align: center;
+            padding-top: 150px;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+        }
+
+        .home-two-span {
+            color: rgb(65, 19, 65);
+        }
+
+        .home-two-p {
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .home-two-p-two {
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        #project {
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px;
+
+
+
+        }
+
+        .p-two {
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 60px;
+            text-align: center;
+           
+            
+
+        }
+        .project-one{
+            height: 300px;
+            background-color: black;
+            grid-column: 2/ span 1;
+        }
+        .project-two{
+            height: 300px;
+            background-color: rgb(88, 75, 75);
+        }
+
+        #project-line-two {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 50px;
+
+
+        }
+
+        .project-three {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 50px;
+            border-style: groove;
+             border-color: black;
+
+        }
+
+        .project-four {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 50px;
+            border-style: groove;
+             border-color: black;
+
+        }
+
+        .project-five {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 50px;
+            border-style: groove;
+             border-color: black;
+
+        }
+
+        .project-six {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 50px;
+            border-style: groove;
+             border-color: black;
+
+        }
+
+        #project-line-three {
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 50px;
+        }
+
+        .project-seven {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-left: 390px;
+            margin-top: 60px;
+            border-style: groove;
+             border-color: black;
+        }
+
+        .project-eight {
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 60px;
+            border-style: groove;
+             border-color: black;
+        }
+        #project-line-four{
+            
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 50px;
+        }
+        .project-nine{
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 80px;
+            border-style: groove;
+             border-color: black;
+
+
+        }
+    
+        .project-ten{
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 80px;
+            border-style: groove;
+             border-color: black;
+
+
+        }
+    
+        .project-eleven{
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            margin-top: 80px;
+
+            border-style: groove;
+             border-color: black;
+
+
+        }
+    
+        .project-twelve{
+           
+            height: 200px;
+            background-color: wheat;
+            border-radius: 30px;
+            border-style: groove;
+             border-color: black;
+             margin-top: 80px;
+
+
+        }
+        .p-three {
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 120px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo">
+                <h1 class="logo-h1">RK</h1>
+            </div>
+            <div class="profile-links">
+                <a style="text-decoration: none;" href="">
+                <h1 style="color: white; ">Home</h1></a>
+                <a style="text-decoration: none;" href="../css-class-two/projects.html">
+                <h1 style="color: white;">Project</h1></a>
+                <h1>About Me</h1>
+                <h1>Contact</h1>
+            </div>
+        </div>
+        <div id="home">
+            <div class="home-one">
+                <img class="home-one-img" src="../assets/image/media_20250221_160900_3041301229786159257.jpg"
+                    alt="rohit" height="550px">
+            </div>
+            <div class="home-two">
+                <h1 class="home-two-h1">Hi, I'm <span class="home-two-span"> Rohit Kharpuriye</span></h1>
+                <p class="home-two-p">Full Stack Developer</p>
+                <p class="home-two-p-two">"I am a passionate Full Stack Developer with a deep love
+                    for crafting seamless and dynamic web applications. From designing intuitive user interfaces to
+                    building robust back-end systems, I enjoy bringing ideas to life with clean and efficient code."</p>
+            </div>
+         
+        </div>
+        <p class="p-two">Projects</p>
+        <div id="project">
+            <div class="project-one">
+                <a href="../table-calculator.html">
+
+                    <img style="padding-left: 60px;"
+                        src="https://pluspng.com/img-png/calculator-hd-png-calculator-white-background-hd-photos-1996.png"
+                        alt="" height="250px">
+                      <h2 style="text-align: center;">Calculator</h2>
+                </a>
+            </div>
+            <div class="project-two">
+                <a href="../table-youtube-page.html">
+                <img style="padding-left: 20px; padding-top: 30px;" src="https://www.freeiconspng.com/uploads/youtube-logo-hd-png-file-6.png" alt="" height="120px">
+                <h2 style="text-align: center; margin-top: 110px">Youtube Page</h2>
+            </a>
+            </div>
+
+        </div>
+        <div id="project-line-two">
+            <div class="project-three"></div>
+            <div class="project-four"></div>
+            <div class="project-five"></div>
+            <div class="project-six"></div>
+
+        </div>
+        <div id="project-line-three">
+            <div class="project-seven"></div>
+            <div class="project-eight"></div>
+        </div>
+        <div id="project-line-four">
+            <div class="project-nine"></div>
+            <div class="project-ten"></div>
+            <div class="project-eleven"></div>
+            <div class="project-twelve"></div>
+        </div>
+        <p class="p-three">About Me</p>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
