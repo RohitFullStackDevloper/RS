@@ -2,317 +2,354 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple JavaScript I/O Demo</title>
 
-  <title>table index page</title>
-</head>
-
-<body style="background-color:burlywood;">
   <style>
-    .table {
-      width: 100%;
-      height: auto;
-      border-collapse: collapse;
+    /* Simple CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
     }
 
-    .first-row {
-      height: 150px;
-
-    }
-
-    .first-row-th {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
       text-align: center;
-
+      border-radius: 5px;
+      margin-bottom: 30px;
     }
 
-    .second-row-th {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
+    .section {
+      margin-bottom: 40px;
+    }
 
+    .title {
       text-align: center;
-
+      color: #e67e22;
+      margin-bottom: 15px;
+      font-size: 40px;
     }
 
-    .third-row-th {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-
-      text-align: center;
-
+    .row {
+      display: flex;
+      gap: 20px;
+      background-color: #ddd;
+      padding: 20px;
+      border-radius: 5px;
     }
 
-    .fourth-row-th {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-
-      text-align: center;
-
+    @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+      }
     }
 
-    .second-row {
-      height: 500px;
-      text-align: center;
-      background-color: burlywood;
+    .box {
+      flex: 1;
+      background-color: #333;
+      color: green;
+      padding: 15px;
+      border-radius: 5px;
     }
 
-    .second-row-th-one {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-
+    .display-area {
+      background-color: #e67e22;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      min-height: 50px;
+      border-radius: 5px;
     }
 
-    .second-row {
-      height: 500px;
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 10px 0;
     }
 
-    .second-row-th-one {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-      background-color: lightseagreen;
-      background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjYyNy1hZXctNDctdGVjaG5vbG9neWJhY2tncm91bmRfMS5qcGc.jpg);
-
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 3px;
     }
 
-    .third-row-th-one {
-      height: 500px;
-      text-align: center;
-
+    hr {
+      border: 1px solid #555;
+      margin: 10px 0;
     }
 
-    .third-row-th-one {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-      background-color: blanchedalmond;
-
+    pre {
+      white-space: pre-wrap;
+      margin: 0;
+      font-size: 16px;
     }
 
-    .fourth-row-th-one {
-      height: 500px;
-      border-style: solid;
-      text-align: center;
-      background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjYyNy1hZXctNDctdGVjaG5vbG9neWJhY2tncm91bmRfMS5qcGc.jpg);
-
-    }
-
-    .fourth-row-th-one {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-      text-align: center;
-
-
-    }
-
-    .fifth-row {
-      height: 500px;
-    }
-
-    .fifth-row-th-one {
-      border-style: solid;
-      border-color: black;
-      border-width: 3px;
-      background-color: lightseagreen;
-      text-align: center;
-
+    code {
+      color: #fff;
     }
   </style>
-  </head>
+</head>
 
-  <body>
-    <table class="table" style="text-align: center;">
-      <!--first row-->
-      <tr class="first-row">
-        <td class="first-row-th"><a href="#home">
-            <h2 style=" font-size: 30px;">Home</h2>
-          </a></td>
-        <td class="second-row-th"> <a href="#about">
-            <h2 style="font-size: 30px;">About</h2>
-          </a></td>
-        <td class="third-row-th"><a href="#projects">
-            <h2 style="font-size: 30px;">Project</h2>
-          </a></td>
-        <td class="fourth-row-th"><a href="#contacts">
-            <h2 style="font-size: 30px;">Contact</h2>
-          </a></td>
-      </tr>
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Input/Output in Programming Language</h1>
+  </div>
 
-      <!--second row-->
-      <tr class="second-row" img>
-        <td colspan="4" class="second-row-th-one" id="home">
-          <img src="assets/image/media_20250221_160900_3041301229786159257.jpg" height="250px"
-            style="background-color: black;">
-          <br>
-          <br>
-          <b> <big
-              style="color: darkred; background-color: floralwhite; height: 100px; width: 200px; font-size: 30px;">My
-              Name Is Rohit Kharpuriye</big></b>
-          <br><br>
-          <b> <big style="color: darkred; background-color: floralwhite; font-size: 40px;"> I Am A Full Stack
-              Developer....</big></b>
-        </td>
+  <!-- First Example: User Input -->
+  <div class="section">
+    <h2 class="title">JavaScript</h2>
+    <div class="row">
+      <!-- Code Box -->
+      <div class="box">
+        <h3>Code</h3>
+        <hr>
+        <pre><code>
+// I/O By HTML
 
-      </tr>
-      <!--third row-->
-      <tr class="third-row-th-one">
-        <td colspan="4" class="third-row-th-one" id="about">
-          <h1 style="color: green;font-size: 40px;">About</h1>
-          <h3 style="font-size: 30px;">Hello there! I'm Rohit Kharpuriye a passionate Full Stack Web Developer
-            with a keen interest in leveraging technology to create impactful solutions.
-            With a solid foundation in both front-end and back-end development,
-            I specialize in creating project from various language.</h3>
-        </td>
+function getUserInput() {
+  let text = document.getElementById("userInput").value;
+  document.getElementById("output").innerHTML = text;
+}
+        </code></pre>
+      </div>
 
+      <!-- Output Box -->
+      <div class="box">
+        <h3>Output</h3>
+        <hr>
+        <div class="display-area" id="output">Type something and click Submit</div>
+        <input type="text" id="userInput" placeholder="Enter text here">
+        <button onclick="getUserInput()">Submit</button>
+      </div>
+    </div>
+  </div>
 
-      </tr>
-      <!--fourth row-->
-      <tr class="fourth-row-th-one">
-        <td colspan="4" class="fourth-row-th-one" id="projects">
+  <!-- Second Example: Direct Assignment -->
+  <div class="section">
+    <div class="row">
+      <!-- Code Box -->
+      <div class="box">
+        <h3>Code</h3>
+        <hr>
+        <pre><code>
+// I/O By Direct Assignment
 
-          <table
-            style="border-style: solid; border-width: 3px; border-width: 100%; height:auto ; border-collapse: collapse; text-align: center;">
-            <caption>
-              <p style="font-size: 30px; color: yellow;"><b> My projects</b></p>
-            </caption>
-            <tr>
+function showInfo() {
+  let name = "Rohit Kharpuriye";
+  let age = 21;
+  document.getElementById("infoOutput").innerHTML = 
+    "Your Name Is: " + name + "<br>" + 
+    "Your Age Is: " + age;
+}
+        </code></pre>
+      </div>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200PX;"> <a
-                  href="table-calculator.html">
-                  <h3 style="color: yellow;">Calculator</h3> <img
-                    src="https://png.pngtree.com/element_our/20190529/ourmid/pngtree-calculator-digital-calculator-illustration-image_1216297.jpg"
-                    height="200px" alt="">
-                </a></td>
+      <!-- Output Box -->
+      <div class="box">
+        <h3>Output</h3>
+        <hr>
+        <div class="display-area" id="infoOutput">Click the button to show info</div>
+        <button onclick="showInfo()">Show Info</button>
+      </div>
+    </div>
+  </div>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200PX; "><a href="resume.html">
-                  <h3 style="color: yellow;">Rusume</h3> <img
-                    src="https://w7.pngwing.com/pngs/605/888/png-transparent-resume-curriculum-vitae-template-moto-highway-racing-computer-icons-resume-blue-text-resume-thumbnail.png"
-                    height="200px" alt="">
-                </a></td>
+  <!-- JavaScript -->
+  <script>
+    function getUserInput() {
+      let text = document.getElementById("userInput").value;
+      document.getElementById("output").innerHTML = text;
+    }
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="table-report-card.html">
-                  <h3 style="color: yellow;">Report Card</h3> <img
-                    src="https://w7.pngwing.com/pngs/777/982/png-transparent-report-card-national-secondary-school-student-education-report-angle-text-class-thumbnail.png"
-                    height="200px" alt="">
-                </a></td>
+    function showInfo() {
+      let name = "Rohit Kharpuriye";
+      let age = 21;
+      document.getElementById("infoOutput").innerHTML =
+        "Your Name Is: " + name + "<br>" +
+        "Your Age Is: " + age;
+    }
+  </script>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="table-student-data.html">
-                  <h3 style="color: yellow;">Student Data</h3><img
-                    src="https://w7.pngwing.com/pngs/27/972/png-transparent-pedagogy-massive-open-online-course-education-university-student-student-thumbnail.png"
-                    height="200px" alt="">
-                </a></td>
+  <!-- Second Example: Direct Assignment -->
+  <div class="section">
+    <div class="row">
+      <!-- Code Box -->
+      <div class="box">
+        <h3>Code</h3>
+        <hr>
+        <pre><code>
+// I/O By alert output
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="css-class/box-model-assigment.html">
-                  <h3 style="color: yellow;">Box Model</h3><img
-                    src="https://cdn1.iconfinder.com/data/icons/interview/50/cv-512.png" height="200px" alt="">
-                </a></td>
-            </tr>
-            <tr>
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="table-youtube-page.html">
-                  <h3 style="color: yellow;">Youtube Page</h3><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjsEE5AEnUPCrhugw6xO3zSRRRsP_KGvMMnw&s"
-                    height="200px" alt="">
-                </a></td>
+function promalert("Enter your name");
+  let (name) {
+    alert("hello,"+name+"!")
+    document.getElementById("prompt-output").innerHTML = "hello," + name + "!";
+  
+  }
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"> <a
-                  href="regestration-form.html">
-                  <h3 style="color: yellow;">Regestration Form</h3><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJtfGEU_ASk9TaRDwNObrcpNIfZ3RrnIWxqq2E-S-ylvd76UMeiA1bEI8WAjllJDdaaY&usqp=CAU"
-                    height="200px" alt="">
-                </a></td>
+        </code></pre>
+      </div>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="influential-person.html">
-                  <h3 style="color: yellow;">Influential Persons</h3><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwD0QFzfYxyuzmgJScCZ9v12-tOlf3jPBi4Q&s"
-                    height="200px" alt="">
-                </a></td>
+      <!-- Output Box -->
+      <div class="box">
+        <h3>Output</h3>
+        <hr>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="table-chess.html">
-                  <h3 style="color: yellow;">Chess</h3><img
-                    src="https://i.pinimg.com/474x/6f/75/d1/6f75d1b27876c1ce5f920c1ba22730f3.jpg" height="200px" alt="">
-                </a></td>
+        <div class="input-area">
+          <div class="output-display" id="prompt-output">Output shows in an alert dialog</div>
+        </div>
+      </div>
+    </div>
 
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                  href="css-class/css-assiengment.html">
-                  <h3 style="color: yellow;">CSS Assignment</h3><img
-                    src="https://www.figma.com/community/resource/a151942b-455e-4591-9542-128160b2f270/thumbnail"
-                    height="200px" alt="">
-                </a></td>
-            </tr>
-            <tr>
-              <td style="border-style: solid; border-width: 3px; width: 100%; height: 200px;"><a
-                href="css-class/css-grid-assignment.html">
-                <h3 style="color: yellow;"> Breaking News </h3><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJyFhX5Eod53ZiyF_b51j5ty9-yYtGdAzhFw&s"
-                  height="200px" alt="tech news">
-              </a></td>
-              <td  style="border-style: solid; border-width: 3px; width: 100%; height: 200px;">
-                <a href="css-class/grid-class-four.html">
-                  <h3 style="color: yellow;">Mobiles And Computers Accessaries </h3>
-                <img src="https://e7.pngegg.com/pngimages/955/1006/png-clipart-laptop-computer-repair-technician-peripheral-microsoft-computer-accessories-computer-network-electronics-thumbnail.png" alt="" height="200px">
-              </a>
-              </td>
-              <td  style="border-style: solid; border-width: 3px; width: 100%; height: 200px;">
-                <a href="css-class/website.html">
-                  <h3 style="color: yellow;">Website Using Grid</h3>
-                <img src="https://w7.pngwing.com/pngs/174/337/png-transparent-responsive-web-design-website-development-web-template-system-booth-model-design-template-web-design-service.png" alt="" height="200px">
-              </a>
-              </td>
-              <td  style="border-style: solid; border-width: 3px; width: 100%; height: 200px;">
-                <a href="css-class-two/Registration-form-grid.html">
-                  <h3 style="color: yellow;">Registration Form Using Grid</h3>
-                <img src="https://img.freepik.com/free-vector/registration-form-template-with-flat-design_23-2147971971.jpg" alt="" height="200px">
-              </a>
-              </td>
-
-            </tr>
+  </div>
 
 
-          </table>
-          <br>
+  <div class="section">
+    <h2 class="title">Java</h2>
+    <div class="row">
+      <!-- Code Box -->
+      <div class="box">
+        <h3>Code</h3>
+        <hr>
+        <pre><code>
+ // Direct Assign
 
+          import java.util.Scanner;
 
+public class BasicIO {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Age: ");
+        int age = input.nextInt();
+        System.out.println("Hi " + name + ", you are " + age + " years old.");
+        input.close();
+    }
+}
+ </code></pre>
+</div>
+<div class="box">
+  <h3>Output</h3>
+  <hr>
+ <br>
+    <pre class="output-text">Name: Rohit Kharpuriye
+ 
+Age: 21
 
-        </td>
+Hi Rohit Kharpuriye, you are 21 years old.</pre>
+</div>
+</div>
+</div>
 
-      </tr>
-      <!--fifth row-->
-      <tr class="fifth-row">
-        <td colspan="4" class="fifth-row-th-one" id="contacts">
-          <h1 style="color: red; font-size: 40px;">Contact</h1>
-          </blockquote>
+</div>
 
-          <p style="font-size: 20px;"><b>Phone:</b> <a title="my contact" href="tel:+91 7020886178"> +91 7020886178</a>
-          </p>
-          <p style="font-size: 20px;"><b>Email:</b><a title="my contact" href="mailto:kharpuriyerohit99@gmail.com">
-              mailto:rohitkharpuriye99@gmail.com</a></p>
-          <p style="font-size: 20px;"><b>Location:</b> <a title="my contact"
-              href="https://www.google.com/maps/place/Jolwadi,+Maharashtra+441305/@21.3473387,78.4464008,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd44e6da32cbb5f:0x5377bb2a1d05473!8m2!3d21.3471847!4d78.4485509!16s%2Fg%2F1hjh3lh7l?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D">
-              Jolwadi</a></p>
-          <p style="font-size: 20px;"><b>GitHub:</b> <a
-              href="https://github.com/RohitFullStackDevloper">https://github.com/RohitFullStackDevloper</a></p>
-          <p style="font-size: 20px;"><b>Linkedin:</b> Rohit kharpuriye </p>
-          <p style="font-size: 20px;"><b>Skype:</b> Available</p>
+<!-- python -->
+
+<div class="section">
+  <h2 class="title">python</h2>
+  <div class="row">
+    <!-- Code Box -->
+    <div class="box">
+      <h3>Code</h3>
+      <hr>
+      <pre><code>
+// Basic input/output in python
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Hello, {name}!")
+print(f"You are {age} years old.")
 
 
 
 
-    </table>
-    </table>
+//Direct Assign
 
-  </body>
+name = "Rohit Kharpuriye"
+age = 21
+print(f"Hello, {name}!")
+print(f"You are {age} years old.")
+      </code></pre>
+    </div>
+    <div class="box">
+      <h3>Output</h3>
+      <hr>
+      <pre class="output-text">
+       
+ Name: Rohit Kharpuriye
+ 
+ Age: 21
+        
+ Hello, Rohit Kharpuriye!
+
+ You are 21 year old.
+</pre>
+</div>
+</div>
+
+
+
+
+
+<div class="section">
+  <h2 class="title">C</h2>
+  <div class="row">
+    <!-- Code Box -->
+    <div class="box">
+      <h3>Code</h3>
+      <hr>
+      <pre><code>
+        #include &lt;stdio.h&gt;
+
+        int main() {
+            char name[50];
+            int age;
+            printf("Name: ");
+            scanf("%s", name);
+            printf("Age: ");
+            scanf("%d", &age);
+            printf("Hi %s, you are %d years old.\n", name, age);
+            return 0;
+        }
+        
+        // Direct Assign
+
+        #include &lt;stdio.h&gt;
+        
+        int main() {
+            char name[50] = "RK";
+            int age = 21;
+            
+            printf("Hi %s, you are %d years old.\n", name, age);
+            return 0;
+        }
+</code></pre>
+</div>
+
+<div class="box">
+  <h3>Output</h3>
+  <hr>
+  <pre class="output-text">
+    <pre class="output-text">
+Name: Rohit
+
+age: 21
+
+Hi Rohit, you are 21 years old.</pre>
+</div>
+</div>
+
+                 
+</body>
 
 </html>
