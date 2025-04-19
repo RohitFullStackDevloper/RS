@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+
+    <link rel="shortcut icon" href="../assets/image/media_20250221_160900_3041301229786159257.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: rgb(47, 39, 39);
+            --accent-color: rgb(218, 79, 19);
+            --hover-color: rgb(11, 233, 203);
+            --light-text: white;
+            --dark-text: black;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR STYLES ===== */
+        .section-navbar {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            font-family: 'Libre Baskerville';
+            background-color: var(--primary-color);
+            padding: 2rem;
+            box-shadow: rgba(17, 122, 202, 0.3) 0px 10px 20px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        .section-navbar.scrolled {
+            height: 80px;
+            background-color: rgba(47, 39, 39, 0.95);
+            backdrop-filter: blur(5px);
+        }
+
+        .container .logo {
+            min-width: 60px;
+            text-align: justify;
+            font-family: "Libre Baskerville", serif;
+            font-size: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .section-navbar .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .section-navbar ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .section-navbar .container .logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            color: white;
+            font-size: 20px;
+            font-family: "Urbanist", sans-serif;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .logo a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .logo a:hover::after {
+            width: 100%;
+        }
+
+        .navbar {
+            padding-left: 420px;
+            padding-top: 10px;
+        }
+
+        .navbar a {
+            font-size: 22px;
+            text-transform: uppercase;
+            color: var(--light-text);
+            font-family: "Urbanist", sans-serif;
+            font-weight: bold;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--hover-color);
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO SECTION STYLES ===== */
+        main {
+            width: 100%;
+            height: 100vh;
+            margin-top: 100px;
+            position: relative;
+            background-image: url("https://images.unsplash.com/photo-1480365334925-2aee561aa28e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D");
+            background-size: cover;
+            background-attachment: fixed;
+            animation: bgSlider 15s ease-in-out infinite;
+        }
+
+        main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        @keyframes bgSlider {
+
+            0%,
+            100% {
+                background-image: url("https://images.unsplash.com/photo-1480365334925-2aee561aa28e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D");
+            }
+
+            33% {
+                background-image: url("https://media.istockphoto.com/id/1170916882/photo/woman-taking-picture-outdoors.jpg?s=612x612&w=0&k=20&c=C09Dk9DoDjVLR60Ztt-Jd9tyOdMo9p8WOIWUaVnfSrk=");
+            }
+
+            66% {
+                background-image: url("https://150832185.v2.pressablecdn.com/wp-content/uploads/2023/05/PIC40215-URE_IARc_Class_Trip_Wild_Dunes_2966_1920px-1024x683.jpg");
+            }
+        }
+
+        .section-hero {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .heading {
+            width: 100%;
+        }
+
+        .heading h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 50px;
+            font-family: 'Libre Baskerville';
+            color: var(--light-text);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+
+        .heading p {
+            text-align: center;
+            padding-top: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+            font-family: "Urbanist", sans-serif;
+            font-weight: bold;
+            color: var(--light-text);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-btn {
+            height: 60px;
+            width: 420px;
+            margin: 40px auto 0;
+            display: block;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50px;
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 1.5s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(218, 79, 19, 0.5);
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--hover-color);
+            color: var(--dark-text);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(11, 233, 203, 0.5);
+        }
+
+        .cta-btn:hover::before {
+            left: 100%;
+        }
+
+        /* ===== GALLERY SECTION STYLES ===== */
+        .section-gallary {
+            width: 100%;
+            height: auto;
+            padding: 80px 0;
+            background-color: #f8f8f8;
+        }
+
+        .section-gallary h1 {
+            text-align: center;
+            margin: 0 0 20px;
+            font-size: 40px;
+            font-family: 'Libre Baskerville';
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-gallary h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .section-gallary p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Libre Baskerville';
+            color: rgb(53, 49, 49);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .about-div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 100px;
+            margin-bottom: 30px;
+        }
+
+        .about-one {
+            height: 340px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .about-one.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-one::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .about-one:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-one:hover::before {
+            opacity: 1;
+        }
+
+        .about-one img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .about-one:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ===== SERVICES SECTION STYLES ===== */
+        .section-services {
+            min-height: 550px;
+            width: 100%;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e9e9e9 100%);
+            position: relative;
+        }
+
+        .section-services::before,
+        .section-services::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), transparent);
+        }
+
+        .section-services::before {
+            top: 0;
+        }
+
+        .section-services::after {
+            bottom: 0;
+        }
+
+        .section-services h1 {
+            text-align: center;
+            margin: 0 0 50px;
+            font-size: 40px;
+            font-family: 'Libre Baskerville';
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-services h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .section-services p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Libre Baskerville';
+            color: rgb(53, 49, 49);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .about-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+
+        .services {
+            height: 320px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .services.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .services:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .services:hover::before {
+            transform: scaleX(1);
+        }
+
+        .fa-solid {
+            font-size: 70px;
+            color: var(--primary-color);
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            transition: all 0.5s ease;
+        }
+
+        .services:hover .fa-solid {
+            transform: rotateY(360deg);
+            color: var(--accent-color);
+        }
+
+        .services h3 {
+            font-family: 'Libre Baskerville';
+            text-align: center;
+            padding-top: 10px;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .services h4 {
+            font-family: "Urbanist", sans-serif;
+            text-align: center;
+            color: rgb(95, 88, 88);
+            font-size: 18px;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .services h6 {
+            font-family: "Urbanist", sans-serif;
+            text-align: center;
+            min-height: 40px;
+            font-size: 14px;
+            text-transform: capitalize;
+            line-height: 1.4;
+        }
+
+        /* ===== BLOG SECTION STYLES ===== */
+        .section-blog {
+            height: 500px;
+            width: 100%;
+            background-image: url("http://vivekkvikas.com/wp-content/uploads/2018/01/sketch.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-blog::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .blog-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--light-text);
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 40px;
+            font-family: 'Libre Baskerville';
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .blog-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-family: "Urbanist", sans-serif;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .blog-btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            border: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.6s;
+        }
+
+        .blog-btn:hover {
+            background-color: var(--hover-color);
+            color: var(--dark-text);
+            transform: translateY(-5px);
+        }
+
+        /* ===== CONTACT SECTION STYLES ===== */
+        .section-contact {
+            min-height: 350px;
+            width: 100%;
+            background: linear-gradient(135deg, #333 0%, #222 100%);
+            padding: 30px 0 0;
+        }
+
+        .div-contact {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(55, 52, 52);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .contact {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 30px;
+            padding-bottom: 40px;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        .contact h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact .heading {
+            font-size: 22px;
+            padding-top: 10px;
+            padding-left: 40px;
+            color: white;
+            font-family: "Urbanist", sans-serif;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .contact b {
+            font-size: 18px;
+            color: #ddd;
+            font-family: "Urbanist", sans-serif;
+            text-transform: capitalize;
+            margin-left: 40px;
+        }
+
+        .contact-info-item {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .contact-info-item.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .social-link.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact .fa-instagram,
+        .contact .fa-whatsapp {
+            font-size: 30px;
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .contact .fa-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .contact .fa-whatsapp {
+            background-color: #25D366;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 1200px) {
+            .navbar {
+                padding-left: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding-left: 150px;
+            }
+
+            .section-navbar ul {
+                gap: 20px;
+            }
+
+            .cta-btn {
+                width: 350px;
+            }
+
+            .about-div {
+                padding: 0 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-navbar .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section-navbar {
+                height: auto;
+                padding: 15px;
+            }
+
+            .navbar {
+                padding-left: 0;
+                padding-top: 15px;
+            }
+
+            .section-navbar ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .heading h1 {
+                font-size: 36px;
+            }
+
+            .heading p {
+                font-size: 22px;
+            }
+
+            .cta-btn {
+                width: 80%;
+                font-size: 24px;
+            }
+
+            .about-div {
+                padding: 0 20px;
+            }
+
+            .social-link {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .heading h1 {
+                font-size: 28px;
+            }
+
+            .heading p {
+                font-size: 18px;
+            }
+
+            .cta-btn {
+                width: 90%;
+                font-size: 20px;
+                height: 50px;
+            }
+
+            .section-gallary h1,
+            .section-services h1 {
+                font-size: 32px;
+            }
+
+            .about-div {
+                gap: 15px;
+            }
+
+            .about-services {
+                padding: 0 20px;
+            }
+        }
+
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="section-navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="" class="animate__animated animate__fadeIn">Mayur radhakrishna
+                    <br> Photography and videography</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="animate__animated animate__fadeIn">HOME</a></li>
+                    <li><a href="#gallary" class="animate__animated animate__fadeIn animate__delay-1s">Gallary</a></li>
+                    <li><a href="#services" class="animate__animated animate__fadeIn animate__delay-2s">Services</a>
+                    </li>
+                    <li><a href="#blog" class="animate__animated animate__fadeIn animate__delay-3s">blog</a></li>
+                    <li><a href="#contact" class="animate__animated animate__fadeIn animate__delay-4s">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-hero" id="home">
+                <div class="heading">
+                    <h1>Muyur radhakrishna <br>Photography and videography</h1>
+                    <p>we capture the exhilariting moment at your pre-wedding shoot</p>
+                    <button class="cta-btn">BOOK YOUR SHOOT NOW</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="section-gallary" id="gallary">
+        <h1 class="animate__animated animate__fadeIn">Wedding Photography Showcase</h1>
+        <p class="animate__animated animate__fadeIn animate__delay-1s">Our wedding photography style is modern,
+            contemporary and off-beat. A short selection of some of our
+            favourites is given below. To see more of our work, check out the full showcase or see our real Indian
+            wedding photography stories!</p>
+
+        <div class="about-div">
+            <div class="about-one">
+                <img src="https://arjunkarthaphotography.com/wp-content/uploads/2021/08/Twogether-Studios-Showcase-Home-2021-1-768x768.jpg"
+                    alt="">
+            </div>
+            <div class="about-one">
+                <img src="https://arjunkarthaphotography.com/wp-content/uploads/2021/08/Twogether-Studios-Showcase-Home-2021-2-768x768.jpg"
+                    alt="">
+            </div>
+            <div class="about-one">
+                <img src="https://arjunkarthaphotography.com/wp-content/uploads/2021/08/Twogether-Studios-Showcase-Home-2021-3-768x768.jpg"
+                    alt="">
+            </div>
+            <div class="about-one">
+                <img src="https://arjunkarthaphotography.com/wp-content/uploads/2021/08/Twogether-Studios-Showcase-Home-2021-4-768x768.jpg"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="about-div">
+            <div class="about-one">
+                <img src="https://arjunkarthaphotography.com/wp-content/uploads/2021/08/Twogether-Studios-Showcase-Home-2021-5-768x768.jpg"
+                    alt="">
+            </div>
+    
+        </section>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="shortcut icon" href="../assets/image/media_20250221_160900_3041301229786159257.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Urbanist", sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background: #232526;
+            background: -webkit-linear-gradient(to right, #414345, #232526);
+            background: linear-gradient(to right, #414345, #232526);
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+            font-family: 62.5%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Poppins", sans-serif;
+            ;
+        }
+
+        span {
+            color: rgb(157, 0, 255);
+        }
+
+        p,
+        li,
+        a {
+            font-family: "Urbanist", sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
+            font-weight: 400;
+            color: white;
+        }
+
+        .container {
+            max-width: 142rem;
+            margin: 0 auto;
+            padding: 2rem 3.4rem;
+
+
+        }
+
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-two--cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 2.2rem;
+            background-color: rgb(4, 244, 244);
+            ;
+            border-radius: 0.6rem;
+            color: black;
+            font-weight: bold;
+            box-shadow: rgb(4, 196, 217) 0px 5px 15px;
+
+        }
+
+
+
+
+
+
+
+
+        .btn:hover {
+            background-color: maroon;
+            cursor: pointer;
+            box-shadow: rgba(26, 26, 92, 1) 0px 7px 29px 0px;
+        }
+
+        .section-navbar {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 30px;
+
+        }
+
+        .section-navbar .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section-navbar .navbar ul {
+            display: flex;
+            gap: 20px;
+            text-transform: capitalize;
+            font-family: "Urbanist", sans-serif;
+
+
+
+
+            & li a {
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 1.5rem;
+                display: inline-block;
+                position: relative;
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.3rem;
+                    left: 0;
+                    width: 0%;
+                    border-bottom: 0.2rem solid gold;
+
+
+                }
+
+            }
+
+            & li a:hover:after {
+                width: 100%;
+
+            }
+
+        }
+
+
+
+
+        .section-navbar .navbar ul :hover {
+            color: rgb(4, 244, 244);
+        }
+
+
+        li {
+            list-style: none;
+
+        }
+
+        main {
+
+
+            height: 610px;
+
+        }
+
+        .section-hero .grid {
+            align-items: center;
+            gap: 10rem;
+
+            & .hero-subheading {
+                text-transform: uppercase;
+                padding-left: 0.5rem;
+                letter-spacing: 0.7rem;
+                font-size: 1.2rem;
+                word-spacing: 0.5rem;
+                color: white;
+                font-weight: 700;
+                padding-bottom: 0.6rem;
+            }
+
+            & .hero-heading {
+                font-family: "Jost", sans-serif;
+                color: rgb(4, 244, 244);
+                font-weight: 700;
+                font-size: 3.6rem;
+                text-transform: uppercase;
+                font-family: "Urbanist", sans-serif;
+
+            }
+
+            & .hero-para {
+                color: white;
+                margin-top: 1rem;
+                margin-bottom: 1.5rem;
+                text-align: justify;
+            }
+        }
+
+
+
+        .section-hero--image img {
+            border-radius: 20px;
+            height: 450px;
+            box-shadow: rgba(7, 176, 238, 0.842) 0px 5px 15px;
+
+        }
+
+
+
+
+
+
+        .section-common-heading {
+            font-size: 3.2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            padding-left: 2.5rem;
+
+
+        }
+
+        .section-projects .project-div {
+            text-align: center;
+
+        }
+
+        .section-projects img {
+            padding: 2.4rem;
+            width: 20rem;
+            height: auto;
+            border-radius: 10%;
+            box-shadow: rgba(21, 170, 175, 0.871) 0px 7px 29px 0px;
+            background-color: white;
+
+        }
+
+        .section-common--title {
+            font-size: 2rem;
+            margin: 1.5rem 0 1.2rem 0;
+            color: aqua;
+        }
+
+        .grid-three--cols {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .section-projects .grid {
+            gap: 6.4rem;
+        }
+
+        .icon:hover a>img {
+            
+            background-color: aqua;
+
+
+
+        }
+
+        .navbar-brand a {
+            font-family: "Urbanist", sans-serif;
+            font-size: 40px;
+            padding-left: 40px;
+            font-weight: bold;
+            color: orange;
+
+
+
+        }
+
+        .social-icons i {
+            font-size: 40px;
+
+
+
+
+
+
+        }
+
+        #linkedin {
+
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+            color: aqua;
+
+
+        }
+
+        #twitter {
+
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+            color: aqua;
+
+
+        }
+
+        #instagram {
+
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+            color: aqua;
+
+
+        }
+
+        #github {
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+            color: aqua;
+
+
+        }
+
+        #instagram:hover {
+            color: maroon;
+
+        }
+
+        #linkedin:hover {
+            color: maroon;
+
+        }
+
+        #github:hover {
+            color: maroon;
+
+        }
+
+        #twitter:hover {
+            color: maroon;
+
+        }
+
+
+
+        .fa-solid {
+            padding: 2.4rem;
+            color: orange;
+            font-size: 5.2rem;
+            border-radius: 100%;
+
+        }
+
+        .grid-four--cols {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .section-about .grid {
+            gap: 6.4rem;
+        }
+
+        .section-about .about-div {
+            padding: 1.4rem;
+            text-align: center;
+        }
+
+        .section-about .about-div:hover {
+            background-color: gray;
+            box-shadow: rgba(6, 198, 246, 0.877) 0px 20px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 10%;
+            width: 250px;
+            aspect-ratio: 1;
+
+        }
+
+        .about-div .icon .fa-brands {
+            padding: 2.4rem;
+            color: orange;
+            font-size: 5.5rem;
+            border-radius: 100%;
+
+
+        }
+
+        .section-common-heading P {
+            text-align: justify;
+            padding-left: 0.5rem;
+            font-size: 30px;
+            padding-top: 20px;
+        }
+
+        .section-common-heading h2 {
+            margin-top: 40px;
+            color: orange;
+            font-size: 40px;
+            text-transform: uppercase;
+
+
+        }
+
+        .contact {
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 35px;
+            font-weight: bold;
+            font-family: "Urbanist", sans-serif;
+            padding-right: 10px;
+            color: orange;
+
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+
+        }
+
+        ::placeholder {
+            font-size: 25px;
+
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin-top: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "Urbanist", sans-serif;
+            border-radius: 10px;
+            margin-bottom: 80px;
+            background-color: aqua;
+            box-shadow: rgba(26, 26, 92, 1) 0px 7px 29px 0px;
+            border: none;
+
+            &:hover {
+                background-color: maroon;
+            }
+
+
+        }
+
+        .contact {
+            margin-top: 40px;
+            margin-left: 340px;
+            background-color: white;
+            height: 440px;
+            width: 800px;
+            border-radius: 20px;
+
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <header class="section-navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#">RK</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project">project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <div class="section-hero" id="home">
+            <div class="container grid grid-two--cols">
+                <div class="section-hero--content">
+                    <p class="hero-subheading"> FULL STACK <span> DEVELOPER</span></p>
+                    <h1 class="hero-heading">
+                        Rohit Kharpuriye
+                    </h1>
+                    <p class="hero-para">
+                        "I am a passionate Full Stack Developer with a deep love
+                        for crafting seamless and dynamic web applications. From designing intuitive user interfaces to
+                        building robust back-end systems, I enjoy bringing ideas to life with clean and efficient code."
+                    </p>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/rohit-kharpuriye-33413832b/"><i id="linkedin"
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/rohit_kharpuriye/"><i id="instagram"
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/home"><i id="twitter" class="fa-brands fa-twitter"></i></a>
+                            <a href="https://github.com/RohitFullStackDevloper"><i id="github"
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-btn">
+                        <a href="../resume.html" class="btn btn-white">Resume</a>
+                    </div>
+
+                </div>
+                <div class="section-hero--image">
+                    <figure>
+                        <img src="../assets/image/media_20250221_160900_3041301229786159257.jpg" alt="Rohit">
+
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+
+    </main>
+    <section class="section-projects" id="project">
+        <div class="container">
+            <div class="section-common-heading">My Projects</div>
+
+
+        </div>
+        <div class="container grid grid-three--cols">
+            <div class="project-div">
+                <div class="icon">
+                    <a href="../css-class-two/Registration-form-grid.html">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/712/564/small_2x/3d-render-illustration-of-project-management-analysis-result-icon-png.png"
+                            alt=""></a>
+                </div>
+                <h3 class="section-common--title">Registration Form</h3>
+                <p>Using HTML And CSS i Made Registration Form</p>
+            </div>
+
+            <div class="project-div">
+                <div class="icon">
+                    <a href="../table-calculator.html">
+                        <img src="https://png.pngtree.com/png-clipart/20250104/original/pngtree-calculator-with-big-display-png-image_6786739.png"
+                            alt=""></a>
+                </div>
+                <h3 class="section-common--title">Calculator</h3>
+                <p>Using Table I Made This Calculator</p>
+            </div>
+
+            <div class="project-div">
+                <div class="icon">
+                    <a href="../css-class/website.html">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/181/small_2x/website-3d-icon-png.png"
+                            alt=""></a>
+                </div>
+                <h3 class="section-common--title">First Website</h3>
+                <p>I made first Website Using HTML And CSS .</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section-about" id="about">
+        <div class="container">
+            <div class="section-common-heading">About
+                <p>A passionate full-stack developer with a strong foundation in modern web technologies, dedicated to
+                    crafting user-centric applications with a focus on clean code and efficient development practices."
+                </p>
+                <h2>Technical Skills</h2>
+            </div>
+
+
+        </div>
+
+
+        <div class="container grid grid-four--cols">
+
+            <div class="about-div" id="about">
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="section-common--title">HTML</h3>
+
+            </div>
+
+            <div class="about-div">
+                <div class="icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <h3 class="section-common--title">CSS</h3>
+
+            </div>
+
+            <div class="about-div">
+                <div class="icon">
+                    "<i class="fa-brands fa-js"></i>
+                </div>
+                <h3 class="section-common--title">JAVASCRIPT</h3>
+
+            </div>
+
+            <div class="about-div">
+                <div class="icon">
+                    <i class="fa-brands fa-java"></i>
+                </div>
+                <h3 class="section-common--title">JAVA</h3>
+
+            </div>
+        </div>
+
+        <div class="section-contact" id="contact">
+            <div class="container">
+                <h2 class="section-common-heading">Contact Me</h2>
+                <p class="section-common-subheading"
+                    style="padding-left: 40px; padding-top: 10px; text-transform: capitalize;">
+                    get in touch with me. i am always here to help you</p>
+
+                <div class="contact">
+                    <label for="name">Enter Your Name:</label>
+                    <input type="text" id="name" placeholder="  Enter Your Name">
+                    <br>
+                    <br>
+                    <label for="email">Enter Your Email:</label>
+                    <input type="email" id="email" placeholder=" Enter Your Email">
+                    <br>
+                    <br>
+                    <label for="message">Whats your Message:</label>
+                    <br>
+                    <br>
+                    <textarea name="text" id="message" placeholder="  Your Message" cols="80" rows="10"></textarea>
+                    <br>
+                    <button>Send Message</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+</body>
+
+</html>
